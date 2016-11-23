@@ -1,0 +1,9 @@
+en:
+  app:
+    title: Favorito
+  searches:
+    form_title: Search With Username
+    placeholder: Type a github username...
+    button_text: Search
+
+

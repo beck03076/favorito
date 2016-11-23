@@ -1,0 +1,12 @@
+- if flash[:notice]
+  %div{class: 'flash success'}
+    = flash[:notice].html_safe
+
+- if flash[:error]
+  %div{class: 'flash error'}
+    = flash[:error].html_safe
+
+- if flash[:warning]
+  %div{class: 'flash warning'}
+    = flash[:warning].html_safe
+
