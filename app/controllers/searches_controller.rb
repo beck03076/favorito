@@ -5,7 +5,7 @@ class SearchesController < ApplicationController
   end
 
   def create
-    @results = Search.perform(search_params)
+    result = Search.perform(search_params)
   end
 
   private

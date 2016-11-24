@@ -11,4 +11,7 @@ module Platforms
   # Raised when an abstract class is instantiated
   class CannotInstantiate < Error; end
 
+  # Raised when a non existing class is expected
+  class ClassDoesNotExist < Error; end
+
 end

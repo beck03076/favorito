@@ -1,8 +1,8 @@
 module Favorito
   class Client < Platforms::AbstractClient
 
-    def initialize(platform)
-      @platform = platform
+    def initialize(_platform = nil)
+      @platform = _platform
       @options =  platform.options
     end
 
@@ -16,6 +16,10 @@ module Favorito
 
     private
 
+    def platform
+      @platform ||= NoPlatform.new
+    end
+
     def client
       @client ||= platform_klass::Client.new(@options)
     end
@@ -26,6 +30,9 @@ module Favorito
 
     def platform_klass
       @platform.name.to_s.classify.constantize
+
+    rescue NameError
+      raise Platforms::ClassDoesNotExist
     end
   end
 end
