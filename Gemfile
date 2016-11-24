@@ -59,6 +59,7 @@ group :test do
   gem 'webmock'
   gem 'vcr'
   gem 'rails-controller-testing'
+  gem 'typhoeus'
 end
 
 gem 'sawyer'

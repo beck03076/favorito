@@ -8,6 +8,11 @@ describe Github::UserRepository do
         to raise_error Github::InvalidUsername
     end
 
+    it "raises empty user name exception" do
+      expect { Github::UserRepository.new("") }.
+        to raise_error Github::InvalidUsername
+    end
+
   end
 
   context "passing a valid username" do

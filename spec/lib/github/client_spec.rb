@@ -84,8 +84,10 @@ describe Github::Client do
     end
 
     it "handles headers" do
+      header = header_opts
+      header['Accept'] = 'text/plain'
       stub_request(:get, "https://api.github.com/check?foo=bar").
-        with(:headers => header_opts)
+        with(:headers => header)
       Github.get "/check", {query: {foo: "bar"}, headers: { accept: "text/plain"} }
       assert_requested :get, "https://api.github.com/check?foo=bar"
 
@@ -109,9 +111,6 @@ describe Github::Client do
       end
     end
   end
-
-
-
 
 end
 

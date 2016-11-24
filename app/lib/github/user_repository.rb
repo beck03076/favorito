@@ -34,7 +34,7 @@ module Github
     private
 
     def validate_username!
-      if @username !~ USERNAME_PATTERN
+      if (@username !~ USERNAME_PATTERN) || @username.blank?
         raise_invalid_username!
       end
     end

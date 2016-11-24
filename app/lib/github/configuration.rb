@@ -1,4 +1,5 @@
 module Github
+  # class Configuraion; end
   # Configuration options for client
   module Configuration
 

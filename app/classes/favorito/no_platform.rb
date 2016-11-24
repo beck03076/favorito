@@ -6,7 +6,7 @@ module Favorito
     end
 
     def username
-      ""
+      "dummy03076"
     end
 
     def options
