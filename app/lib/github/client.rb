@@ -3,7 +3,7 @@ module Github
   # Client for the GitHub API
   #
   # @see https://developer.github.com
-  class Client
+  class Client < Platforms::AbstractClient
 
     include Github::Configuration
     include Github::Connection
