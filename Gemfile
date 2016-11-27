@@ -36,6 +36,7 @@ group :test do
   gem 'vcr'
   gem 'rails-controller-testing'
   gem 'typhoeus'
+  gem 'simplecov'
 end
 
 gem 'sawyer'

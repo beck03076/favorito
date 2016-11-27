@@ -1,6 +1,9 @@
+require 'simplecov'
 require 'webmock/rspec'
 require 'vcr'
 require 'factory_girl_rails'
+
+SimpleCov.start 'rails'
 
 VCR.configure do |config|
   config.cassette_library_dir = 'fixtures/vcr_cassettes'

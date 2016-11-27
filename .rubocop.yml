@@ -11,3 +11,4 @@ AllCops:
     - '**/lib/tasks/**/*'
     - '**/script/**/*'
     - '**/features/support/env.rb'
+    - '**/Guardfile'

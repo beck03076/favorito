@@ -7,6 +7,12 @@ class ApplicationController < ActionController::Base
   rescue_from Github::UserNotFound, with: :redirect_to_index
   rescue_from Github::InvalidResponse, with: :redirect_to_index
 
+  layout false 
+
+  def favorito
+    render 'shared/favorito'
+  end
+
   private
 
   def redirect_to_index(exception)
