@@ -2,15 +2,20 @@
 
 Favorito translates to **Favorite in Portuguese**(at least that's what google says)
 
-So well, this is a full fledged ruby on rails application that can be started on your local server and was developed with a Behaviour Driven and Test First Approach. Also called as Outside In Development.(In simple english, you write your features first, then work your way into writing the tests for models/libraries and controllers and make all tests green)
+So well, this is a full fledged ruby on rails application that can be started on your local server and was developed with a **Behaviour Driven(BDD) and Test First Approach(TDD)**. Also called as Outside In Development.(In simple english, you write your features first, then work your way into writing the tests for models/libraries and controllers and make all tests green)
 
 # User stories and Design Diagram
 
-Based on the code assignment's problem description, user stories with features and scenarios are captured in a pdf document and also assuming these stories as the problem statement, a thorough human-friendly design diagram representing the proposed solution is included in the same pdf file. This design diagram shows how this core rails app, favorito is design and implemented in a object oriented dimension.
+Based on the code assignment's problem description, **user stories** with features and scenarios are captured in a pdf document and also assuming these stories as the problem statement, a thorough human-friendly **design diagram** representing the proposed solution is included in the same pdf file. This design diagram shows how this core rails app, favorito is design and implemented in a object oriented dimension.
+
+This document is located under design directory
+
+*  ./design/user_stories_design.pdf
 
 # How to Start
 
 Use the following commands to start the rails app on your local server
+**[Every command in this readme assumes you are in the rails root directory of this app]**
 
 * $ git clone https://github.com/beck03076/favorito
 * $ cd favorito
@@ -18,15 +23,15 @@ Use the following commands to start the rails app on your local server
 
 # How to Use
 
-Once the app is started, just enter a github username in the search form and click on search, that's it, you will see the favorito finding the favorite programming language of the github user.
+Once the app is started, just **enter a github username in the search form and click on search**, that's it, you will see the favorito finding the favorite programming language of the github user.
 
 # How to run the test suite
 
 Use the following commands to run the test suites
 
-$ cd favorito
-$ rspec
-$ rake cucumber
+* $ cd favorito
+* $ rspec
+* $ rake cucumber
 
 # Tests Coverage
 
@@ -36,4 +41,16 @@ Enter this URL on your browser with the right path,
 
 *  $ file:///home/beck/unboxed/favorito/coverage/index.html#_AllFiles
 
+# Steps to check LOC
 
+To check the lines of code in this repository, you can use this simple shell script by executing the following command,
+
+*  $ ./loc.sh
+
+# Yard Documentation
+
+The entire code base is well documented following the **yard coding comments conventions.** To read the documentation of this rails app you can execute the following command,
+
+*  $ yard server
+
+and visit http://localhost:8808, to the yard documentation of this application.
