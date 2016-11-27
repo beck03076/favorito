@@ -1,7 +1,7 @@
-Given(/^I have started favorito app$/) do end;
+Given(/^I have started favorito app$/) {}
 
 When(/^I goto the homepage$/) do
-  visit "/"
+  visit '/'
 end
 
 Then(/^I should see the search form$/) do

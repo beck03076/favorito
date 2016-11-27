@@ -13,5 +13,4 @@ module Platforms
 
   # Raised when a non existing class is expected
   class ClassDoesNotExist < Error; end
-
 end

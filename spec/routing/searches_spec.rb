@@ -6,7 +6,7 @@ RSpec.describe 'Routes for search pages', type: :routing do
   end
 
   it 'routes search create' do
-    expect(post('/searches')).to route_to(controller: 'searches', action: 'create')
+    expect(post('/searches')).to route_to(controller: 'searches',
+                                          action: 'create')
   end
-
 end

@@ -1,32 +1,33 @@
+# search index and results page
+# /searches
 class SearchesController < ApplicationController
-  before_filter :set_search
+  before_action :set_search, only: [:index]
 
+  # GET root
+  #
+  # renders the search form
   def index
   end
 
+  # POST '/searches'
+  #
+  # performs the actual search by contact the Favorito::Client
   def create
-    result = Search.perform(search_params)
-    @decorated_result = Favorito::Presenter.new(result)
-    render :index
-  rescue Github::InvalidUsername => e
-    redirect_to_index(e)
-  rescue Github::UserNotFound => e
-    redirect_to_index(e)
+    @search = Search.perform(search_params)
+    @decorated_result = decorated_result(@search)
   end
-
 
   private
-
-  def redirect_to_index(exception)
-    redirect_to :root, notice: exception.to_s
-  end
 
   def set_search
     @search = Search.new
   end
 
+  def decorated_result(search)
+    Favorito::Presenter.new(search.result)
+  end
+
   def search_params
     params.require(:search).permit(:username)
   end
-
 end

@@ -1,31 +1,36 @@
 module Github
-
-  # Class to parse GitHub repository owner and name from
-  # URLs and to generate URLs
+  # Class to manage a github user repository with username
+  # and encapsulates repository related functionalities
+  # eg: username validation
   class UserRepository
     attr_accessor :username
-    USERNAME_PATTERN = /^[a-zA-Z0-9_\.]*$/
 
-    # Instantiate from a GitHub repository URL
+    # Standard Github username format in REGEXP
+    USERNAME_PATTERN = /^[a-zA-Z0-9_\.]*$/
+    # Invalid user exception message
+    INVALID_USER = 'Invalid Github Username.
+                    Please enter a valid username!'.freeze
+
+    # create a user_repository
     #
-    # @return [Repository]
-    # @raise [Octokit::InvalidRepository] if the repository
-    #   has an invalid format
+    # @param username [String]
+    # @return [UserRepository] if valid username
+    # @raise [InvalidUsername] if invalid username
     def initialize(username)
       @username = username
       validate_username!
     end
 
+    # @return [String] github users path
     def public_users_path
       "users/#{@username}"
     end
 
-    # Repository owner/name
-    # @return [String]
+    # @return [String] git user_repos path
     def public_user_repos_path
       "users/#{@username}/repos"
     end
-    # Repository URL based on {Octokit::Client#web_endpoint}
+
     # @return [String]
     def url
       "#{Github.api_endpoint}/#{public_user_repos_path}"
@@ -34,13 +39,11 @@ module Github
     private
 
     def validate_username!
-      if (@username !~ USERNAME_PATTERN) || @username.blank?
-        raise_invalid_username!
-      end
+      raise_invalid! if (@username !~ USERNAME_PATTERN) || @username.blank?
     end
 
-    def raise_invalid_username!
-      raise Github::InvalidUsername, "Invalid Github Username. Please enter a valid username!"
+    def raise_invalid!
+      raise Github::InvalidUsername, INVALID_USER
     end
   end
 end
