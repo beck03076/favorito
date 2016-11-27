@@ -71,4 +71,4 @@ Since this rails app is created to showcase the best abilities, good practices, 
 
 This section will list out 10 highlights of this rails app as follow,
 
-* Abstract Factory Design Pattern (app/classes/favorito/client.rb)
+[Abstract Factory Design Pattern](app/classes/favorito/client.rb)
