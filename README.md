@@ -69,7 +69,7 @@ and visit http://localhost:8808, to the yard documentation of this application.
 
 Since this rails app is created to showcase the best abilities, good practices, clean, readable, maintainable, well designed, fully tested and an elegant ruby/rails code, it is good to highlight some of the good things in the app.
 
-This section will list out 10 highlights of this rails app as follow,
+This section will list out 10 highlights of this rails app as follow, **please click on the link to navigate to the relevant code file**
 
 [Abstract Factory Design Pattern](app/classes/favorito/client.rb)
 
@@ -84,3 +84,9 @@ This section will list out 10 highlights of this rails app as follow,
 [Acceptance Tests - Cucumber](features/search.feature)
 
 [0 Offenses with Rubocop](https://github.com/bbatsov/rubocop)
+
+[Fully documented with yard comments convention](doc)
+
+[Composition and Delegation Over Inheritance](app/classes/favorito/client.rb)
+
+[Extending Module Class](lib/core_ext/module.rb)
