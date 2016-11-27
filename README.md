@@ -21,9 +21,19 @@ Use the following commands to start the rails app on your local server
 * $ cd favorito
 * $ rails server -p 3000
 
-# How to Use
+# How to Use - Favorite Language Task
 
-Once the app is started, just **enter a github username in the search form and click on search**, that's it, you will see the favorito finding the favorite programming language of the github user.
+Once the app is started, visit the following url,
+
+* $ http://localhost:3000/
+
+now, just **enter a github username in the search form and click on search**, that's it, you will see the favorito finding the favorite programming language of the github user.
+
+# How to Use - Horse Task
+
+Once the app is started, visit the following url,
+
+* $ http://localhost:3000/favorito
 
 # How to run the test suite
 
@@ -54,3 +64,11 @@ The entire code base is well documented following the **yard coding comments con
 *  $ yard server
 
 and visit http://localhost:8808, to the yard documentation of this application.
+
+# Highlights
+
+Since this rails app is created to showcase the best abilities, good practices, clean, readable, maintainable, well designed, fully tested and an elegant ruby/rails code, it is good to highlight some of the good things in the app.
+
+This section will list out 10 highlights of this rails app as follow,
+
+* Abstract Factory Design Pattern (app/classes/favorito/client.rb)
