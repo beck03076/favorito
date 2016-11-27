@@ -72,3 +72,15 @@ Since this rails app is created to showcase the best abilities, good practices, 
 This section will list out 10 highlights of this rails app as follow,
 
 [Abstract Factory Design Pattern](app/classes/favorito/client.rb)
+
+[Null Object Pattern](app/classes/favorito/no_platform.rb)
+
+[Decorator Pattern](app/classes/favorito/presenter.rb)
+
+[Tableless Rails Model](app/models/search.rb)
+
+[90.32% Tests Coverage](coverage/index.html)
+
+[Acceptance Tests - Cucumber](features/search.feature)
+
+[0 Offenses with Rubocop](https://github.com/bbatsov/rubocop)
